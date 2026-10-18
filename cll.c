@@ -113,7 +113,7 @@ void insertatpos() {
     printf("Enter the position where you want to add: ");
     scanf("%d", &pos);
 
-    // Fixed: Can insert from position 1 up to count + 1
+    
     if (pos < 1 || pos > count + 1) {
         printf("INVALID POSITION\n");
         return;
@@ -127,7 +127,7 @@ void insertatpos() {
     struct node* newnode = (struct node*)malloc(sizeof(struct node));
     printf("Enter value: ");
     scanf("%d", &newnode->data);
-    count++; // Fixed: Increment count
+    count++;
 
     struct node* temp = head;
     for (int i = 1; i < pos - 1; i++) {
